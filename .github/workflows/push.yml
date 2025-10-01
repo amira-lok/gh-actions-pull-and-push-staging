@@ -1,0 +1,22 @@
+name: Push to Lokalise  
+on:  
+  workflow_dispatch:
+
+jobs:  
+  build:  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Push files to Lokalise
+        uses: lokalise/lokalise-push-action@v4.0.0
+        with:
+          api_token: 9cdc17d4a0db729755777cc425f3fe46da93a544
+          project_id: 4407131168dc05092dc016.11123498
+          file_format: json
+          translations_path: |
+            locales/**/**.json
+          base_lang: en
