@@ -18,5 +18,5 @@ jobs:
           project_id: 4407131168dc05092dc016.11123498
           file_format: json
           translations_path: |
-            locales/**/**.json
+            locales
           base_lang: en
